@@ -1,0 +1,11 @@
+--Versión BD phpMyAdmin-5.2.2
+--Versión PHP v1.55.16740
+
+--Pasos para validación
+1) Ejecutar los query en la consola en el siguiente orden:
+- mst_moneda
+- mst_sucursal
+- mst_bodega
+- producto
+2) Copiar todos los archivos (sin la carpeta sql) hacia una carpeta de proyecto, teniendo el index.php como página principal (corroborar que se tengan todos los complementos instalados para las conexiones MySQL).
+3) Ejecutar el index.php que contiene el formulario y realizar el registro de nuevo producto.
