@@ -1,4 +1,5 @@
-CREATE TABLE `mst_sucursal` (
+sCREATE TABLE `sucur_mon` (
+  `idSucMon` int(11) NOT NULL,
   `idSucursal` int(11) NOT NULL,
-  `Nombre_Sucursal` varchar(50) NOT NULL
+  `idMoneda` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
