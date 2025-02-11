@@ -31,7 +31,7 @@
 
                     require 'conexion.php';
 
-                    $lista = $conexion->query("Select idbodega, nombre_bodega from mst_bodega");
+                    $lista = $conexion->query("Select distinct idbodega, nombre_bodega from bodega_sucur_mon");
                     ?>
                     <?php while ($row = $lista->fetch_assoc()) { ?>
                         <option value="<?php echo $row['idbodega']; ?>"><?php echo $row['nombre_bodega'] ?></option>

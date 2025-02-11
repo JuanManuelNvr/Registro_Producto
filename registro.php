@@ -124,13 +124,13 @@
     } else {
    
     $insert = "INSERT INTO producto(idCodigo,Nombre,Bodega,Sucursal,Moneda,Precio,Mat_Plastico,Mat_Metal,Mat_Madera,Mat_Vidrio,Mat_Textil,Descripcion) 
-              VALUES ('$codigo','$plastico','$bodega','$sucursal','$moneda','$precio','$plastico','$metal','$madera','$vidrio','$textil','$descripcion'); ";
+              VALUES ('$codigo','$nombre','$bodega','$sucursal','$moneda','$precio','$plastico','$metal','$madera','$vidrio','$textil','$descripcion'); ";
     $ejecutar = mysqli_query($conexion,$insert);
 
     $act_final="UPDATE producto p
                 JOIN mst_bodega b ON p.Bodega = b.idBodega
-                JOIN mst_sucursal s ON b.idSucursal = s.idSucursal
-                JOIN mst_moneda m ON b.idMoneda = m.idMoneda
+                JOIN mst_sucursal s ON p.Sucursal = s.idSucursal
+                JOIN mst_moneda m ON p.Moneda = m.idMoneda
                 SET Bodega = b.Nombre_Bodega,
                 Sucursal = s.Nombre_Sucursal,
                 Moneda = m.TipoMoneda;";

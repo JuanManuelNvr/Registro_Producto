@@ -1,8 +1,10 @@
 const cbxBodega = document.getElementById('bodega')
 cbxBodega.addEventListener('change',getSucursal)
-cbxBodega.addEventListener('change',getMoneda)
+
 
 const cbxSucursal = document.getElementById('sucursal')
+cbxSucursal.addEventListener('change',getMoneda)
+
 const cbxMoneda = document.getElementById('moneda')
 
 //Sucursal
@@ -44,11 +46,11 @@ function fetchAndSetDataMon(url, formData, targetElement) {
 }
 
 function getMoneda(){
-    let Bodega = cbxBodega.value
+    let Sucursal = cbxSucursal.value
     let url = 'getMoneda.php'
     let formData = new FormData()
 
-    formData.append('id_bodega',Bodega)
+    formData.append('id_sucursal',Sucursal)
 
     fetchAndSetDataMon(url, formData, cbxMoneda)
 }
